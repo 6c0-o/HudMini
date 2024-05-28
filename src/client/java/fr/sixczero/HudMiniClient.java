@@ -1,12 +1,12 @@
 package fr.sixczero;
 
+import fr.sixczero.hud.hudLoader;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.font.TextRenderer;
-import net.minecraft.client.gui.DrawContext;
 
 public class HudMiniClient implements ClientModInitializer {
 	@Override
-	public void onInitializeClient() { }
+	public void onInitializeClient() {
+		HudRenderCallback.EVENT.register(new hudLoader());
+	}
 }
