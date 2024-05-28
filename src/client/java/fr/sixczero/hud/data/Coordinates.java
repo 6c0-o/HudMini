@@ -11,7 +11,7 @@ public class Coordinates {
     private static Text text;
     private static final MinecraftClient client = MinecraftClient.getInstance();
 
-    public static Text main(){
+    public static Text get(){
         assert client.player != null;
 
         x = (int)client.player.getX();
@@ -19,15 +19,14 @@ public class Coordinates {
         z = (int)client.player.getZ();
 
         xN = x / 8;
-        yN = y / 8;
         zN = z / 8;
 
         if (client.world.getRegistryKey() == World.OVERWORLD){
-            text = format.StringToText("§6XYZ: §f %d %d %d (§c%d %d %d§f)", x, y, z, xN, yN, zN);
+            text = format.StringToText("§eXYZ: §f %d %d %d (§c%d %d %d§f)", x, y, z, xN, y, zN);
         } else if (client.world.getRegistryKey() == World.NETHER) {
-            text = format.StringToText("§6XYZ: §f %d %d %d (§c%d %d %d§f)", x, y, z, x * 8, y, z * 8);
+            text = format.StringToText("§eXYZ: §f %d %d %d (§a%d %d %d§f)", x, y, z, x * 8, y, z * 8);
         } else if (client.world.getRegistryKey() == World.END) {
-            text = format.StringToText("§6XYZ: §f %d %d %d", x, y, z);
+            text = format.StringToText("§eXYZ: §f %d %d %d", x, y, z);
         } else {
             text = Text.of("Error");
         }
