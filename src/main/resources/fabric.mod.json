@@ -3,13 +3,13 @@
 	"id": "hudmini",
 	"version": "${version}",
 	"name": "HudMini",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A small mod to add a few hud elements",
 	"authors": [
-		"Me!"
+		"6c0"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/6c0-o/HudMini",
+		"sources": "https://github.com/6c0-o/HudMini"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/hudmini/icon.png",
