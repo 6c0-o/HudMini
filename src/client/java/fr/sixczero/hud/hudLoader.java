@@ -7,12 +7,13 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.text.Text;
 
 public class hudLoader implements HudRenderCallback {
     private static final MinecraftClient client = MinecraftClient.getInstance();
     @Override
-    public void onHudRender(DrawContext drawContext, float tickDelta) {
+    public void onHudRender(DrawContext drawContext, RenderTickCounter tickCounter) {
         int index = 0;
         renderText(drawContext, Coordinates.get(), index++);
         renderText(drawContext, GameInfo.get(), index++);
@@ -27,4 +28,5 @@ public class hudLoader implements HudRenderCallback {
 
         drawContext.drawText(textRenderer, text, padding + 1, 1 + padding + index * (textHeight), 0xFFFF00, false);
     }
+
 }

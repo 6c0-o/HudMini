@@ -11,7 +11,6 @@
 		"homepage": "https://github.com/6c0-o/HudMini",
 		"sources": "https://github.com/6c0-o/HudMini"
 	},
-	"license": "CC0-1.0",
 	"icon": "assets/hudmini/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -24,7 +23,7 @@
 	},
 	"depends": {
 		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.20.6",
+		"minecraft": ">=1.20.6",
 		"java": ">=21",
 		"fabric-api": "*"
 	},

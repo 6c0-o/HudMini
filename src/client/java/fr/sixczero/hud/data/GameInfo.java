@@ -8,13 +8,12 @@ public class GameInfo {
     private static final MinecraftClient client = MinecraftClient.getInstance();
 
     public static Text get(){
-        long timeOfDay = client.world.getTimeOfDay();
-        long worldDay = timeOfDay / 24000L;
+        long time = client.player.getWorld().getTimeOfDay();
+        long worldDay = time / 24000L;
 
-        int totalMinutes = (int)((timeOfDay % 24000L) / 16.6667);
-        String hourIGM = format.Time((totalMinutes / 60 + 6) % 24);
-        String minuteIGM = format.Time(totalMinutes % 60);
+        long hour = Long.parseLong(format.formatTime((time / 1000 + 6) % 24));
+        int minute = Integer.parseInt(format.formatTime((int) ((time % 1000) / 1000.0 * 60)));
 
-        return format.StringToText("§eDays:§f %d (%s:%s)", worldDay, hourIGM, minuteIGM);
+        return format.StringToText("§eDays:§f %d (%d:%02d)", worldDay, hour, minute);
     }
 }
