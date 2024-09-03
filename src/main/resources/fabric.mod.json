@@ -3,7 +3,7 @@
 	"id": "hudmini",
 	"version": "${version}",
 	"name": "HudMini",
-	"description": "A small mod to add a few hud elements",
+	"description": "A simple and lightweight mod that adds a few HUD elements",
 	"authors": [
 		"6c0"
 	],
@@ -11,7 +11,7 @@
 		"homepage": "https://github.com/6c0-o/HudMini",
 		"sources": "https://github.com/6c0-o/HudMini"
 	},
-	"icon": "assets/hudmini/icon.png",
+	"icon": "assets/hudmini/hudmini_icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -22,8 +22,8 @@
 		]
 	},
 	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": ">=1.20.6",
+		"fabricloader": ">=0.16.3",
+		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
 	},

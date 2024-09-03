@@ -18,16 +18,8 @@ repositories {
 	// for more information about repositories.
 }
 
-loom {
-    splitEnvironmentSourceSets()
-
-	mods {
-		"hudmini" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
+fabricApi {
+	configureDataGeneration()
 }
 
 dependencies {
@@ -38,6 +30,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	
 }
 
 processResources {
