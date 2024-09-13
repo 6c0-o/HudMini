@@ -19,7 +19,7 @@ public class hudLoader implements HudRenderCallback {
         renderText(drawContext, GameInfo.get(), index++);
         renderText(drawContext, IrlInfo.get(), index++);
     }
-
+    // I'll remade with mixin
     private void renderText(DrawContext drawContext, Text text, int index){
         TextRenderer textRenderer = client.textRenderer;
 
