@@ -9,7 +9,7 @@
 	],
 	"contact": {
 		"homepage": "https://github.com/6c0-o/HudMini",
-		"sources": "https://github.com/6c0-o/HudMini/tree/1.21.1-fabric"
+		"sources": "https://github.com/6c0-o/HudMini/tree/1.21.2-fabric"
 	},
 	"icon": "assets/hudmini/hudmini_icon.png",
 	"environment": "*",
@@ -26,7 +26,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.7",
-		"minecraft": "1.21.1",
+		"minecraft": "1.21.2",
 		"java": ">=21",
 		"fabric-api": "*"
 	}
